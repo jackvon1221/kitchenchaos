@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
 			inputVector.x = +1;
 		} 
 		inputVector = inputVector.normalized;
-		transform.position += (Vector3)inputVector; 
+		Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+		transform.position +=  moveDir * Time.deltaTime;
 		Debug.Log(inputVector);
 	}
 }
