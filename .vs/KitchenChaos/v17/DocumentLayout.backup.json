@@ -1,6 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\jackv\\OneDrive\\Documents\\dev\\game_files\\KitchenChaos\\",
   "Documents": [
     {
@@ -8,15 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
-=======
-  "WorkspaceRootPath": "C:\\Users\\scoot\\OneDrive\\Documents\\coding\\KitchenChaos\\",
-  "Documents": [],
->>>>>>> c6d505a64797ae9ea2f3c27367e5e7488ffa5b98
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-<<<<<<< HEAD
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -38,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\jackv\\OneDrive\\Documents\\dev\\game_files\\KitchenChaos\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T22:40:15.678Z",
               "EditorCaption": ""
@@ -46,9 +40,6 @@
           ]
         }
       ]
-=======
-      "DocumentGroups": []
->>>>>>> c6d505a64797ae9ea2f3c27367e5e7488ffa5b98
     }
   ]
 }
