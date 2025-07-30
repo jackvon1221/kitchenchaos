@@ -9,15 +9,45 @@ public class Player : MonoBehaviour
 	[SerializeField] private GameInput gameInput;
 
 	private bool isWalking;
+    private Vector3 lastInteractDir;
 	private void Update()
 	{
-		Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        HandleMovement();
+        HandleInteractions();
+    }
 
-		Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+    public bool IsWalking() {
+		return isWalking;
+	}
+    private void HandleInteractions()
+    {
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-		float moveDistance = moveSpeed * Time.deltaTime;
-		float playerRadius = .7f;
-		float playerHeight = 2f;
+        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractDir = moveDir;
+        }
+        float interactDistance = 2f;
+        if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance))
+        {
+            Debug.Log(raycastHit.transform);
+        } else
+        {
+            Debug.Log("-");
+        }
+    }
+    private void HandleMovement()
+    {
+
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+
+        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+
+        float moveDistance = moveSpeed * Time.deltaTime;
+        float playerRadius = .7f;
+        float playerHeight = 2f;
         bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
 
         if (!canMove)
@@ -67,10 +97,7 @@ public class Player : MonoBehaviour
             isWalking = false;
         }
 
-    }
 
-    public bool IsWalking() {
-		return isWalking;
-	}
+    }
 
 }
